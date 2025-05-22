@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YOYO MUKUL</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #111;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #222;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .video-preview {
+            margin: 20px 0;
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 8px;
+        }
+        .subscribe-btn, .certificate-btn {
+            display: inline-block;
+            background: #ffffff;
+            color: rgb(0, 0, 0);
+            padding: 12px 24px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 15px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        footer {
+            background: #222;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+        #certificateCanvas {
+            display: none;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>YOYO MUKUL</h1>
+        <p>hi i make gaming videos</p>
+
+        <p> for business:-
+            yoyomukulbuisness@gmail.com</p>
+
+            
+            
+    </header>
+
+    <section>
+        <h2>Welcome to the Official Website!</h2>
+        <p>YOYO MUKUL is a YouTube channel bringing exciting gameplay, funny moments, and amazing edits. Be sure to subscribe and join the community!</p>
+
+        <div class="video-preview">
+            <h3>Watch the Latest Video</h3>
+            <iframe src="https://www.youtube.com/embed/BfIUK-3fzNI" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-preview">
+          <h3>Watch The Most Viewed Video</h3>
+          <iframe src="https://www.youtube.com/embed/BF2BH8j_OEs" allowfullscreen></iframe>
+        </div>
+
+        <a class="subscribe-btn" href="https://youtube.com/@yoyo_mukul?si=KBdooKj4akZ0tTc3" target="_blank">Subscribe on YouTube</a>
+
+        <br />
+        
+        <canvas id="certificateCanvas" width="800" height="600"></canvas>
+    </section>
+
+    
+
+    <body>
+
+        <div class="container">
+          <h1>🎖️ GET SUBSCRIBER CERTIFICATE</h1>
+      
+          <input type="text" id="nameInput" placeholder="Enter Your Name" />
+          
+         <style>
+            input[type="text"] {
+            padding: 12px 20px;
+            font-size: 25px;
+            border: 2px solid #00bfff;
+            border-radius: 20px;
+            outline: none;
+            width: 300px;
+            text-align: center;
+            background-color: #111;
+            color: white;
+          }
+          
+        </style> 
+          
+          <br>
+          <button onclick="generateCertificate()">Generate Certificate</button>
+
+          <style>
+            
+            .generate-btn:hover {
+              background: linear-gradient(135deg, #00ff99, #00bfff);
+              box-shadow: 0 0 12px #00ffcc;
+              transform: scale(1.05);
+              border-radius: 20px;
+            }
+          </style>
+         
+      
+          <canvas id="certificateCanvas" width="1087" height="768"></canvas>
+        </div>
+      
+        <script>
+          const canvas = document.getElementById("certificateCanvas");
+          const ctx = canvas.getContext("2d");
+          const image = new Image();
+          image.src = "certificate.png";
+      
+          function generateCertificate() {
+            const name = document.getElementById("nameInput").value.trim();
+            const date = new Date().toLocaleDateString();
+      
+            if (!name) {
+              alert("Please enter your name!");
+              return;
+            }
+      
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+      
+            ctx.font = "bold 40px Comic Sans MS";
+            ctx.fillStyle = "white";
+            ctx.textAlign = "center";
+            ctx.fillText(name, canvas.width / 2, 310);
+      
+            ctx.font = "bold 28px Comic Sans MS";
+            ctx.fillText("Presented on: " + date, canvas.width / 2, 710);
+      
+            canvas.style.display = "block";
+          }
+      
+         
+        </script>
+      </body>
+      
+        
+  
+
+    <footer>
+        <p>&copy; 2025 YOYO MUKUL. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
